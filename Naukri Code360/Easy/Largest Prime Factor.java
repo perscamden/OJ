@@ -14,12 +14,14 @@ public class Solution
         int n
     )
     {
+        int answer = -1;
         
         if
         (
             n % 2 < 1
         )
         {
+            answer = 2;
             n /= 2;
             
             
@@ -43,7 +45,6 @@ public class Solution
         }
         
         
-        int answer = 2;
         int i = 3;
         
         
