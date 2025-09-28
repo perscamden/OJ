@@ -14,8 +14,37 @@ public class Solution
         int n
     )
     {
-        int answer = -1;
-        int i = 2;
+        
+        if
+        (
+            n % 2 < 1
+        )
+        {
+            n /= 2;
+            
+            
+            while
+            (
+                n % 2 < 1
+            )
+            {
+                n /= 2;
+            }
+            
+            
+            if
+            (
+                n < 2
+            )
+            {
+                return 2;
+            }
+        
+        }
+        
+        
+        int answer = 2;
+        int i = 3;
         
         
         while
@@ -31,16 +60,38 @@ public class Solution
             {
                 answer = i;
                 n /= i;
+                
+                
+                while
+                (
+                    n % i < 1
+                )
+                {
+                    n /= i;
+                }
+                
+                
             }
             else
             {
-                i ++;
+                i += 2;
             }
-        
+            
         }
         
+       return answer; 
+        // if
+        // (
+        //     answer == 2
+        // )
+        // {
+        //     return n;
+        // }
+        // else
+        // {
+        //     return answer;
+        // }
         
-        return answer;
     }
     
 }
